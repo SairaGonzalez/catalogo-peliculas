@@ -1,0 +1,64 @@
+<!-- CONTENEDOR DE LA PÁGINA -->
+<div class="contenedor-principal">
+  <!-- HEADER -->
+  <div
+    class="d-flex justify-content-center align-items-center gap-3 px-4 py-4 w-100 text-white bg-secondary bg-gradient"
+  >
+    <a
+      routerLink="/"
+      class="d-flex align-items-center text-white text-decoration-none"
+    >
+      <div class="me-3">
+        <img
+          src="../assets/imagenes/logocatalogo.png"
+          alt="Logo Catálogo"
+          class="img-fluid"
+          style="height: 50px"
+        />
+      </div>
+      <div>
+        <h1 class="h3 mb-0">Filme<i>Plus</i></h1>
+      </div>
+    </a>
+    <!-- BOTÓN CATÁLOGO -->
+    <a routerLink="/movies" class="btn btn-dark ms-5">Catálogo</a>
+  </div>
+
+  <!-- VISTAS -->
+  <div class="contenido">
+    <router-outlet></router-outlet>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="text-center py-3 w-100 text-white bg-secondary bg-gradient">
+    <div class="container">
+      <!-- FILA 1 -->
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-1">
+            <b>Materia: </b>Conceptualización de entornos de desarrollo de
+            aplicaciones y servicios
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p class="mb-1"><b>Asesor: </b> José Francisco Jafet Pérez López</p>
+        </div>
+      </div>
+      <!-- FILA 2-->
+      <div class="row mt-2">
+        <div class="col-md-4">
+          <p class="mb-1"><b>Nombre: </b> Saira Marlene García González</p>
+        </div>
+        <div class="col-md-4">
+          <p class="mb-1"><b>Código: </b> 224065286</p>
+        </div>
+        <div class="col-md-4">
+          <p class="mb-0">
+            <b>Correo: </b>
+            saira.garcia24A&#64;udgvirtual.udg.mx
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

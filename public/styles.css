@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/015/452/755/non_2x/abstract-background-horizontal-wave-lines-design-and-pattern-on-black-background-and-texture-free-vector.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.contenedor-principal {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido {
+    flex: 1;
+    display: flex;
+}
+
+.contenido p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    background-color: #d3d3d3cc;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: 400;
+}

@@ -1,0 +1,56 @@
+<div class="container-fluid mt-4 px-5">
+  <h2 class="mb-4 titulo-peliculas text-center">Editar película</h2>
+  <div *ngIf="pelicula" class="form-card mx-auto">
+    <form (ngSubmit)="actualizar()">
+      <div class="mb-3">
+        <label class="form-label">Título</label>
+        <input
+          type="text"
+          name="title"
+          placeholder="Título"
+          required
+          [(ngModel)]="pelicula.title"
+          class="form-control mb-2"
+        />
+      </div>
+      <div>
+        <label class="form-label">Año</label>
+        <input
+          type="number"
+          name="year"
+          placeholder="Año"
+          required
+          [(ngModel)]="pelicula.year"
+          class="form-control mb-2"
+        />
+      </div>
+      <div>
+        <label class="form-label">URL de la imagen</label>
+        <input
+          type="text"
+          name="cover"
+          placeholder="URL de la imagen"
+          required
+          [(ngModel)]="pelicula.cover"
+          class="form-control mb-2"
+        />
+      </div>
+      <div>
+        <label class="form-label">Sinopsis</label>
+        <textarea
+          name="synopsis"
+          placeholder="Sinopsis"
+          required
+          [(ngModel)]="pelicula.synopsis"
+          class="form-control mb-2"
+        ></textarea>
+      </div>
+      <div class="d-flex justify-content-center gap-2 mt-3">
+        <button type="submit" class="btn btn-dark mt-3">Actualizar</button>
+        <a [routerLink]="['/movie', pelicula.id]" class="btn btn-secondary mt-3"
+          >Cancelar</a
+        >
+      </div>
+    </form>
+  </div>
+</div>

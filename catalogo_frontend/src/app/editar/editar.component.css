@@ -1,0 +1,13 @@
+.titulo-peliculas {
+  color: white;
+}
+
+.form-card {
+  max-width: 600px;
+  border-radius: 6px;
+  padding: 20px;
+  background-color: rgba(134, 138, 143, 0.445);
+  backdrop-filter: blur(8px);
+  color: white;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}

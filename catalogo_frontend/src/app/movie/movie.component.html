@@ -1,0 +1,46 @@
+<div class="container-fluid mt-4 px-5" *ngIf="pelicula; else noExiste">
+  <h2 class="mb-4 titulo-peliculas text-center">Detalle de la película</h2>
+  <!-- CONTENIDO CARD -->
+  <div class="card mx-auto movie-card">
+    <div class="row g-0 align-items-center">
+      <!-- Poster película -->
+      <div class="col-md-4 text-center">
+        <img
+          [src]="pelicula.cover"
+          alt="Poster {{ pelicula.title }}"
+          class="img-fluid movie-img"
+        />
+      </div>
+      <!-- Texto película -->
+      <div class="col-md-8">
+        <div class="card-body">
+          <!-- Título -->
+          <h3 class="movie-title">{{ pelicula.title }}</h3>
+          <!-- Año -->
+          <p class="movie-year">{{ pelicula.year }}</p>
+          <!-- Sinopsis -->
+          <p class="movie-synopsis">{{ pelicula.synopsis }}</p>
+
+          <!-- BOTONES -->
+          <div class="d-flex gap-2 mt-4">
+            <a [routerLink]="['/editar', pelicula.id]" class="btn btn-secondary"
+              >Editar</a
+            >
+            <button (click)="eliminar(pelicula!.id!)" class="btn btn-danger">
+              Eliminar
+            </button>
+          </div>
+          <a routerLink="/movies" class="btn btn-dark mt-3"
+            >Regresar al catálogo</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noExiste>
+  <div class="container-fluid mt-4 px-5 text-center">
+    <div class="alert alert-danger">No se pudo encontrar la película</div>
+  </div>
+</ng-template>
